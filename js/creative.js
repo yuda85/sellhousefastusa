@@ -169,7 +169,7 @@ googleAutocomplete2 = {
     $.ajax({
       type: "POST",
       beforeSend: function (request) {
-        request.setRequestHeader("Access-Control-Allow-Origin", true);
+        request.setRequestHeader("Access-Control-Allow-Origin", "*");
       },
       url: "https://formspree.io/f/xqkgjlkz",
       data: "email=" + email + "&name=" + name + "&address=" + address + "&tel=" + tel,
