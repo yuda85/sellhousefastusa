@@ -210,7 +210,6 @@ googleAutocomplete2 = {
   //Form validation
 
   $("form").submit(function (ev) {
-    debugger;
     var form = $(this);
     form.find(".form-error").removeClass("form-error");
     var formError = false;
