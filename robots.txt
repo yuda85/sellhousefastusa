@@ -2,4 +2,4 @@ User-Agent: *
 
 Allow: /
 
-Sitemap: https://oakandcarterhomes.com/sitemap.xml
+Sitemap: https://sellhousefastusa.com/sitemap.xml

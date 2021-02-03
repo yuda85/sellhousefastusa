@@ -19,7 +19,7 @@ $(function () {
       $this = $("#sendMessageButton");
       $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
       $.ajax({
-        url: "https://oakandcarterhomes.com/sendlead.php",
+        url: "https://sellhousefastusa.com/sendlead.php",
         type: "POST",
         data: {
           name: name,

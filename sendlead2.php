@@ -38,18 +38,18 @@ try {
     $mail->Port = 25;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('noreply@oakandcarterhomes.com
-    ','Oak & Carter Homes - Website step 2 Lead ');
+    $mail->setFrom('noreply@sellhousefastusa.com
+    ','Sell House Fast USA - Website step 2 Lead ');
     $mail->addAddress($to, $name);     // Add a recipient            // Name is optional
     $mail->addAddress($to_2, $name);     // Add a recipient            // Name is optional
-    $mail->addReplyTo('noreply@oakandcarterhomes.com
-    ', 'Oak & Carter Homes - Website step 2  Lead');
+    $mail->addReplyTo('noreply@sellhousefastusa.com
+    ', 'Sell House Fast USA - Website step 2  Lead');
 	$mail->CharSet = 'UTF-8';
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Step 2 lead from Oak & Carter Homes Website Extended Form ';
-    $mail->Body    = '<h1>Step 2 Lead from Oak & Carter Homes Website Extended Form</h1><br/>
+    $mail->Subject = 'Step 2 lead from Sell House Fast USA Website Extended Form ';
+    $mail->Body    = '<h1>Step 2 Lead from Sell House Fast USA Website Extended Form</h1><br/>
     <table style="border: 1px solid #171717;">
     <thead>
         <tr style="border: 1px solid #171717;">
