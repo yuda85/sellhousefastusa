@@ -208,7 +208,9 @@ googleAutocomplete2 = {
   }
   $("#contact").parsley();
   //Form validation
-  $("form").submit(function () {
+
+  $("form").submit(function (ev) {
+    debugger;
     var form = $(this);
     form.find(".form-error").removeClass("form-error");
     var formError = false;
