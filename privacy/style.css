@@ -1,0 +1,13 @@
+
+.hero-content {
+    color: #fff;
+    background: rgba(23,23,23,.6);
+    padding: 20px;
+    border-radius: 4px;
+    min-height: 100px;
+    margin-bottom: 40px;
+}
+header.masthead{
+    min-height: 41vh;;
+}
+

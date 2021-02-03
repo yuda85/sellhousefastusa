@@ -1,0 +1,139 @@
+.step2 header.masthead {
+    padding-top: 90px;
+    background: url(../img/memphis-sell-home-hero.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 30vh;
+}
+.step2 .hero-content{
+    height: auto;
+    min-height: auto;
+}
+.step2-form-container{
+    background: #f8f8f8;
+    border:1px solid #bdbdbd;
+    min-height: 400px;
+    padding: 20px 10px;
+}
+.step2-form-container h4{
+    margin: 15px 0;
+}
+.form-control.error{
+    border-color: #ed4337;
+}
+label.error{
+    color:#ed4337
+}
+.parsley-errors-list li{
+    color:#ed4337;
+    list-style: none;;
+}
+.parsley-error{
+    border-color:#ed4337;
+}
+.sticky-top{
+    margin-bottom: 30px;
+    transition:0.3s all ease;
+    position: relative;
+    z-index: 1;
+}
+.submit-btn{
+    width: 100%;
+}
+@-webkit-keyframes rotate {
+    /* 100% keyframe for  clockwise. 
+       use 0% instead for anticlockwise */
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  .loading3 {
+    height: 0;
+    width: 0;
+    padding: 15px;
+    border: 6px solid #268cc9;
+    border-right-color: #888;
+    border-radius: 22px;
+    -webkit-animation: rotate 1s infinite linear;
+    position: absolute;
+    left: 47.6%;
+    top: 20px;
+    display: none;;
+  }
+@media screen and (min-width:980px){
+    .sticky-top.active{
+        transition:0.3s all ease;
+        position: fixed;
+        top: 110px;
+        margin-bottom: 30px;
+        /* width: 295px; */
+        width: 347px;
+        z-index: 1;
+    }
+}
+@media screen and (max-width:980px){
+    .sticky-top{
+        margin-top:70px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+......0

@@ -1,0 +1,49 @@
+header.masthead {
+    padding-top: 150px;
+    background: url(../img/memphis-sell-home-hero.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 24em;
+}
+.hero-content {
+    color: #fff;
+    background: rgba(23,23,23,0.6);
+    padding: 20px;
+    border-radius: 4px;
+    min-height: auto;
+    margin-bottom: 40px;
+}
+.value-item{
+    width:100%;
+    background: #fff;
+    border:1px solid #bdbdbd;
+    text-align: center;
+    transition:0.2s all ease;
+    padding:20px;
+    height: 330px;
+    margin-bottom:20px;
+}
+.value-item:hover{
+    transform: translateY(-10px);
+}
+.value-item .text-container p{
+    font-size:15px;
+}
+.value-item .icon-container svg{
+    width:80px;
+    height: 80px;
+    margin-bottom: 0;
+}
+#about p{
+    font-size: 1em;
+}
+#people h3{
+    margin-bottom: 30px;
+}
+
+
+@media screen and (max-width:1300px){
+    .value-item{
+        height: auto;
+    }
+}
