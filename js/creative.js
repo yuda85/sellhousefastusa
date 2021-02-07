@@ -179,7 +179,7 @@ googleAutocomplete2 = {
     //   },
     // });
     // console.log("success sendlead");
-    callback();
+    // callback();
   }
 
   var formContainer = $("#form-container");
