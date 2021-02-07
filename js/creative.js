@@ -166,19 +166,20 @@ googleAutocomplete2 = {
   $('[data-toggle="tooltip"]').tooltip();
 
   function sendMail(email, name, address, tel, callback) {
-    $.ajax({
-      type: "POST",
-      beforeSend: function (request) {
-        request.setRequestHeader("Access-Control-Allow-Origin", "*");
-      },
-      url: "https://formspree.io/f/xqkgjlkz",
-      data: "email=" + email + "&name=" + name + "&address=" + address + "&tel=" + tel,
-      cache: false,
-      success: function (result) {
-        callback();
-      },
-    });
-    console.log("success sendlead");
+    // $.ajax({
+    //   type: "POST",
+    //   beforeSend: function (request) {
+    //     request.setRequestHeader("Access-Control-Allow-Origin", "*");
+    //   },
+    //   url: "https://formspree.io/f/xqkgjlkz",
+    //   data: "email=" + email + "&name=" + name + "&address=" + address + "&tel=" + tel,
+    //   cache: false,
+    //   success: function (result) {
+    //     callback();
+    //   },
+    // });
+    // console.log("success sendlead");
+    callback();
   }
 
   var formContainer = $("#form-container");
