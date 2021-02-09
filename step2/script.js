@@ -56,7 +56,6 @@
     $(".loading3").fadeIn();
     var getUrl = window.location;
     var finalUrl = getUrl.protocol + "//" + getUrl.host + "/thank-you/?name=" + $("#name").val();
-    debugger;
     sendMail(fromDataString, function () {
       window.location.href = finalUrl;
     });
@@ -121,6 +120,8 @@
       cache: false,
       success: function (result) {
         console.log("success");
+      },
+      error: function () {
         callback();
       },
     });
