@@ -199,24 +199,26 @@ googleAutocomplete2 = {
       tel: tel,
     };
 
-    // ajax("POST", "https://formspree.io/f/xqkgjlkz", data, success, error);
-
-    // $.ajax({
-    //   type: "POST",
-    //   beforeSend: function (request) {
-    //     request.setRequestHeader("Access-Control-Allow-Origin", "*");
-    //   },
-    //   url: "https://formspree.io/f/xqkgjlkz",
-    //   data: "email=" + email + "&name=" + name + "&address=" + address + "&tel=" + tel,
-    //   cache: false,
-    //   success: function (result) {
-    //     callback();
-    //   },
-    // });
-    //
+    $.ajax({
+      type: "POST",
+      url: "https://formspree.io/f/xqkgjlkz",
+      data: "email=" + email + "&name=" + name + "&address=" + address + "&tel=" + tel,
+      cache: false,
+      success: function (result) {
+        callback();
+      },
+      error: function () {
+        callback();
+      },
+    });
   }
 
   var formContainer = $("#form-container");
+
+  // $("form").submit(function (e) {
+  //   e.preventDefault();
+  //   debugger;
+  // });
 
   $(".form-opener").on("click", function () {
     toggleForm();
@@ -244,49 +246,49 @@ googleAutocomplete2 = {
   $("#contact").parsley();
   //Form validation
 
-  // $("form").submit(function (ev) {
-  //   var form = $(this);
-  //   form.find(".form-error").removeClass("form-error");
-  //   var formError = false;
+  $("form").submit(function (ev) {
+    var form = $(this);
+    form.find(".form-error").removeClass("form-error");
+    var formError = false;
 
-  //   form.find(".input").each(function () {
-  //     if ($(this).val() == "") {
-  //       $(this).addClass("form-error");
-  //       $(this).select();
-  //       formError = true;
-  //       return false;
-  //     } else if ($(this).hasClass("email") && !isValidEmail($(this).val())) {
-  //       $(this).addClass("form-error");
-  //       $(this).select();
-  //       formError = true;
-  //       return false;
-  //     }
-  //   });
+    form.find(".input").each(function () {
+      if ($(this).val() == "") {
+        $(this).addClass("form-error");
+        $(this).select();
+        formError = true;
+        return false;
+      } else if ($(this).hasClass("email") && !isValidEmail($(this).val())) {
+        $(this).addClass("form-error");
+        $(this).select();
+        formError = true;
+        return false;
+      }
+    });
 
-  //   if (!formError) {
-  //     $("body").addClass("form-submitted");
-  //     $("#form-head").addClass("form-submitted");
+    if (!formError) {
+      $("body").addClass("form-submitted");
+      $("#form-head").addClass("form-submitted");
 
-  //     var name = encodeURI(form.find("input.name").val());
-  //     var email = encodeURI(form.find("input.email").val());
-  //     var address = encodeURI(form.find("input.address").val());
-  //     var tel = encodeURI(form.find("input.number").val());
+      var name = encodeURI(form.find("input.name").val());
+      var email = encodeURI(form.find("input.email").val());
+      var address = encodeURI(form.find("input.address").val());
+      var tel = encodeURI(form.find("input.number").val());
 
-  //     var getUrl = window.location;
-  //     var finalUrl = getUrl.protocol + "//" + getUrl.host + "/step2/?" + "name=" + name + "&" + "email=" + email + "&" + "address=" + address + "&" + "tel=" + tel;
+      var getUrl = window.location;
+      var finalUrl = getUrl.protocol + "//" + getUrl.host + "/step2/?" + "name=" + name + "&" + "email=" + email + "&" + "address=" + address + "&" + "tel=" + tel;
 
-  //     sendMail(email, name, address, tel, function () {
-  //       $(form).trigger("reset");
-  //       window.location.href = finalUrl;
-  //     });
+      sendMail(email, name, address, tel, function () {
+        $(form).trigger("reset");
+        window.location.href = finalUrl;
+      });
 
-  //     $(".thankyou-container").fadeIn();
-  //     if (form.hasClass("hero-form")) {
-  //       form.find(".contact-submit").text("...Sending");
-  //     }
-  //   }
-  //   return false;
-  // });
+      $(".thankyou-container").fadeIn();
+      if (form.hasClass("hero-form")) {
+        form.find(".contact-submit").text("...Sending");
+      }
+    }
+    return false;
+  });
 
   window.mobilecheck = function () {
     var check = false;
